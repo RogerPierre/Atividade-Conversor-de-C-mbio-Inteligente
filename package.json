@@ -1,0 +1,26 @@
+{
+  "name": "atividade-conversor-de-c-mbio-inteligente",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RogerPierre/Atividade-Conversor-de-C-mbio-Inteligente.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RogerPierre/Atividade-Conversor-de-C-mbio-Inteligente/issues"
+  },
+  "homepage": "https://github.com/RogerPierre/Atividade-Conversor-de-C-mbio-Inteligente#readme",
+  "dependencies": {
+    "parcel": "^2.16.4",
+    "request": "^2.88.2",
+    "typescript": "^6.0.2"
+  }
+}

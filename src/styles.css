@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: "Sekuya", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+    color: aliceblue;
+}
+header{
+    color: aqua;
+    text-shadow: rgb(0, 162, 255) 10px 0 20px; 
+    
+}
+.GRID-container-money{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    background-color: black;
+    border: 20px;
+    border-color: aqua;
+    padding-top: 75px;
+}
+.form input{
+    justify-self: center;
+    background-color: aqua;
+    width: 800px;
+    height: 50px;
+
+}
+#Output-dollar{
+    color: rgb(95, 95, 207);
+}
+#Output-eur{
+    color: rgb(194, 95, 207);
+}
+#Output-BTC{
+    color: rgb(95, 207, 101);
+}
