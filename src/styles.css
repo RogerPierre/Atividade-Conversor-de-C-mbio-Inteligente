@@ -16,7 +16,7 @@ header{
     text-shadow: rgb(0, 162, 255) 10px 0 20px; 
     
 }
-.GRID-container-money{
+#GRID-container-money{
     display: grid;
     grid-template-columns: 300px 300px 300px;
     background-color: black;
