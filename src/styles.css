@@ -31,10 +31,10 @@ header{
     height: 50px;
 
 }
-#Output-dollar{
+#Output-USD{
     color: rgb(95, 95, 207);
 }
-#Output-eur{
+#Output-EUR{
     color: rgb(194, 95, 207);
 }
 #Output-BTC{

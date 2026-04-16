@@ -1,35 +1,24 @@
-
-
+import { APIreq } from "./Protocol";
 const typeAREA: HTMLInputElement= document.getElementById('typeAREA') as HTMLInputElement
-const MoneyConteiner: HTMLDivElement= document.getElementById('GRID-container-money') as HTMLDivElement;
-
-interface RESmoedas{
-    "USDBRL": resAPi,
-    "EURBRL": resAPi,
-    "BTCBRL": resAPi
-}
-interface resAPi {
-    
-    code: string,
-    codein: string,
-    name: string,
-    high: string,
-    low: string,
-    varBid: string,
-    pctChange: string,
-    bid: string,
-    ask: string,
-    timestamp: string,
-    create_date: string
-    
-}
-async function requestAPIEconomic():Promise<RESmoedas>{
-    const res: Promise<RESmoedas>=(await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL')).json() as Promise<RESmoedas>;
-    if(!res) throw new Error('NOT FOUND');
-    return res;
-}
-
+const [BitcoinDiv,DOLLARdiv,EUROdiv]=[
+    document.getElementById('Output-BTC') as HTMLDivElement,
+    document.getElementById('Output-dollar') as HTMLDivElement,
+    document.getElementById('Output-eur') as HTMLDivElement
+]
+const ReS:APIreq[]=APIreq.apiFetch() as unknown as APIreq[];
+BitcoinDiv.innerHTML=`
+    <div class="moneyOutput" id="Output-${ReS[0]?.code}">
+                <h2 class='money-name'>${ReS[0]?.code}</h2>
+                <p class="value-output">
+                    €0.00
+                </p>
+            </div>
+`;
+console.log(ReS)
 typeAREA?.addEventListener('input',(ev:InputEvent)=>{
-    let valueInput= Number(typeAREA.value);
-    let res: RESmoedas= requestAPIEconomic() as unknown as RESmoedas;
+    const input = ev.target as HTMLInputElement;
+    let value= Number(input.value);
+    if(isNaN(value)) throw new Error('Invalid value.')
+    
+
 });
